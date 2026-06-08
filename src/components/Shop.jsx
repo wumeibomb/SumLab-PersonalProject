@@ -1,7 +1,60 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import AlbumCards from "./albumcards";
 
-function Shop(){
+const albumlist = [   
+    {
+      id: 1,
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaYivx6Fn-bl0jkqVsSG_Arm1XPSECclBvw9NC2lJfgg&s=10",
+      name: "Armageddon",
+      description: "aespa's best selling and most popular album! 5 Random set ver",
+      price: 75 
+    },
+    {
+      "id": 2,
+      img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%2Fid%2FOIF.8wa3Uj2OEF0g0jbv9pUp8g%3Fpid%3DApi&f=1&ipt=493660866d54633b58a80fa98d04e927931093a12b1103eefafafded19c54296&ipo=images",
+      "name": "LEMONADE",
+    "description": "aespa's newest album is out now! 5 Random set ver",
+      "price": 100
+    },
+    {
+      "id": 3,
+      img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.genius.com%2Fd276ef1e7f068c8254f63d763658f6d3.1000x1000x1.png&f=1&nofb=1&ipt=ad47e9dcd1d472b933e3595d8dc34ab55775e5fa9e03a6cecadf890df658e6ed",
+      "name": "Savage",
+      "description": "aespa's most acclaimed title track! Full set",
+      "price": 75
+    },
+    {
+        id: 4,
+      img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.musicmundial.com%2Fen%2Fwp-content%2Fuploads%2F2026%2F05%2FAESPA-Karina-and-Ningning-make-history-with-their-debut-at-the-Met-Gala-2026.jpg&f=1&nofb=1&ipt=120b80ad4e857cf0772480c37e25780e6d437835f42f5d056b69b3274bb03cd2",
+      "name": "Ad - MetGala",
+      "description": "aespa's Karina and NingNing stun at the Met Gala",
+      "price": 75
+    }
+   ]
 
+function Shop() {
+    const [albums, setAlbums] = useState([])
+    function fetchtest() {
+        fetch(albumlist)
+        .then(response => {
+            return response.json()
+        })
+        .then (data => {setAlbums(data)})
+        .catch (error => {console.log(error)})
+    }
+    useEffect(() => {
+        fetchtest()
+    },[])
+    return (
+        <div className="main" style={{backgroundColor:"white", color: "fuchsia",display: "grid", gridTemplateColumns: "auto auto auto"  }} >
+            {albumlist.map(album => (
+                <li key = {album.id} style={{listStyleType: "none", padding: "10px"}}> 
+                    <h3 >{album.name}</h3>
+                    <p>{album.description}</p>
+                    <img src = {album.img} alt = {album.name} width={"250px"}/>
+                </li>
+            ))}
+        </div>
+    )
 }
-
 export default Shop
