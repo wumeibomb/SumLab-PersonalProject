@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import AlbumCards from "./albumcards";
 
 const albumlist = [   
     {
@@ -46,7 +45,7 @@ function Shop() {
         fetchtest()
     },[])
     return (
-        <div className="main" style={{backgroundColor:"white", color: "fuchsia",display: "grid", gridTemplateColumns: "auto auto auto"  }} >
+        <div className="main" style={{backgroundColor:"white", color: "fuchsia",display: "grid", gridTemplateColumns: "auto auto auto"}} >
             {albumlist.map(album => (
                 <li key = {album.id} style={{listStyleType: "none", padding: "10px"}}> 
                     <h3 >{album.name}</h3>
