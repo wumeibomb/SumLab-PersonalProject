@@ -8,6 +8,7 @@ import './App.css'
 
 function App(){
   return (
+    <div style={{backgroundColor: "#2d88d2"}}>
     <BrowserRouter>
     <nav>
       <Link style={{padding: "50px"}} to = "/">Home </Link>
@@ -20,6 +21,7 @@ function App(){
       <Route path = "/Adminportal" element={<Adminportal />} />
     </Routes>
 </BrowserRouter>  
+ </div>
 )
 }
 
