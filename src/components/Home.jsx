@@ -2,8 +2,9 @@ import React from "react"
 
 function Home(){
     return(
-        <div className= "container" style={{backgroundColor: "white"}}>
-    <h1 className="HOMETITLE">ALBUMS.COM</h1>
+        <div className= "container">
+    <h1 className="HOMETITLE" style={{color: "fuchsia", padding: "15px"}}>ALBUMS.COM</h1>
+  
     </div>
 
 )
