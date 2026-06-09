@@ -40,7 +40,7 @@ function Adminportal(){
         }
     
     return(
-        <div style={{backgroundColor: "white", //hw can I make it that the ENTIRE page is white instead of th whte rendering with the form...
+        <div className ="Admin" style={{
         display: "flex", 
         justifyContent: "center", 
         paddingTop: "70px",

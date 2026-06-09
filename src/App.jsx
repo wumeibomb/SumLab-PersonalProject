@@ -11,9 +11,9 @@ function App(){
     <div style={{backgroundColor: "#2d88d2"}}>
     <BrowserRouter>
     <nav>
-      <Link style={{padding: "50px"}} to = "/">Home </Link>
-      <Link style={{padding: "50px"}} to= "/Shop">Shop </Link>
-      <Link style={{padding: "50px"}} to= "/Adminportal">Admin Portal</Link>
+      <Link style={{margin: "20px", fontFamily: "monospace"}} to = "/">Home </Link>
+      <Link style={{margin: "20px",fontFamily: "monospace"}} to= "/Shop">Shop </Link>
+      <Link style={{margin: "20px", fontFamily: "monospace"}} to= "/Adminportal">Admin Portal</Link>
       </nav>
     <Routes>
       <Route path = "/" element={<Home />} />

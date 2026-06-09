@@ -1,3 +1,12 @@
 .main {
-  color: white
+  background-image: url('https://wallpaper.forfun.com/fetch/fc/fc6722c51a63cb72344edc0a55ab7e23.jpeg');
+
+}
+.container{
+  background-image: url('https://img.magnific.com/free-photo/beautiful-tropical-beach-sea-ocean-with-white-cloud-blue-sky-copyspace_74190-8663.jpg?semt=ais_hybrid&w=740&q=80');
+  height: 500px;
+  padding: 50px;
+}
+.Admin{
+  background-image: url('https://wallpapers.com/images/hd/tropical-island-gyu9pqimd6govfx2.jpg');
 }

@@ -16,9 +16,13 @@ function Shop() {
     },[])
 
     return (
-        <div className="main" style={{backgroundColor:"white", color: "fuchsia",display: "grid", gridTemplateColumns: "auto auto auto"}} >
+        <div className="main" style={{ color: "fuchsia",
+        display: "grid", gridAutoColumns: "400px",
+         justifyContent: "center"
+        }} >
             {albums.map(album => (
-                <li key = {album.id} style={{listStyleType: "none", padding: "10px"}}> 
+                <li key = {album.id} style={{listStyleType: "none", padding: "10px", 
+                border: "solid #13b5f5 10px", margin: "50px", borderRadius: "30px", }}> 
                     <h3 >{album.name}</h3>
                     <p>{album.description}</p>
                     <p>${album.price}</p>
