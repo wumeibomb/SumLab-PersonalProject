@@ -1,14 +1,24 @@
 import React, { useEffect } from "react";
 
-function updateAlbums({id, name, description, price, img }){
-     const [album, setAlbum] = useState("")
+function updateAlbums({albums}){
+     const [updatedName, setUpName] = useState(albums.name)
+    const [updatedDesc, setUpDesc] = useState(albums.description)
+    const [updatedIMG, setUpIMG] = useState(albums.img)
+    const [updatedPrice, setUpPrice] = useState(albums.price)
 
-    const handlePATCH = (event) => {
+
+    function handlePATCH(event) {
        event.preventDefault()
-      fetch('http://localhost:4000/albums/{album.id}'), {
+       const updatedAlbum = {
+        img: updatedIMG,
+        name: updatedName,
+        description: updatedDesc,
+        price: updatedPrice
+       }
+      fetch('http://localhost:4000/albums/${album.id}'), {
         method: "PATCH",
        headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({album})
+      body: JSON.stringify({albums})
   }
   .then((response)=> { 
     if (!response.ok) {throw new Error("FLOPPPEEDDDDD")}
@@ -23,5 +33,11 @@ function updateAlbums({id, name, description, price, img }){
         .then(setAlbum)
         .catch(error => console.log(error))
     }, [])
+    return (
+        <div>
+            {}
+        </div>
+    )
+            
 }
 export default updateAlbums
