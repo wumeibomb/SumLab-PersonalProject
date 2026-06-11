@@ -27,14 +27,6 @@
       "name": "Ad - MetGala",
       "description": "aespa's Karina and NingNing stun at the Met Gala",
       "price": "$$$"
-    },
-    {
-      "name": "blackhole",
-      "desc": "ives latest album!",
-      "price": "56",
-      "img": "",
-      "id": "cUdoGzx8LME"
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }
